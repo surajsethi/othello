@@ -1,4 +1,4 @@
 Member1 name: Suraj Sethi        email: suraj.sethi@mail.utoronto.ca        utorid: sethipet
-Member2 name:        email:        utorid:
+Member2 name: Nicholas Tubielewicz  email: nick.tubielewicz@mail.utornto.ca    utorid: tubielew
 Member3 name:        email:        utorid:
 Member4 name:        email:        utorid:
