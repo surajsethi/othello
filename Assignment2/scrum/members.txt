@@ -1,4 +1,4 @@
-Member1 name:        email:        utorid:
+Member1 name: Suraj Sethi        email: suraj.sethi@mail.utoronto.ca        utorid: sethipet
 Member2 name:        email:        utorid:
 Member3 name:        email:        utorid:
 Member4 name:        email:        utorid:
