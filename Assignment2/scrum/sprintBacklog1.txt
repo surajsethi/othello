@@ -15,3 +15,14 @@ ISSUE    : Member 4
 - demonstrates that they can run OthelloControllerHumanVSHuman on their dev platform
 - demonstrates that they can run MVCApplication on their dev platform
 --------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 0.02 : tubielew : STATUS : Completed
+NAME     : Configure and use system
+OWNER    : Nicholas Tubielewicz
+PRIORITY : 1
+ESTIMATE : 1 hour   ACTUAL : 1 hour 
+ISSUE    : Member 2 
+- demonstrates that they have added, committed and pushed members.txt. 
+- demonstrates that they can run OthelloControllerHumanVSHuman on their dev platform
+- demonstrates that they can run MVCApplication on their dev platform
+--------------------------------------------------------------------------
