@@ -1,8 +1,4 @@
 Member1 name: Suraj Sethi        email: suraj.sethi@mail.utoronto.ca        utorid: sethipet
 Member2 name: Nicholas Tubielewicz  email: nick.tubielewicz@mail.utornto.ca    utorid: tubielew
-<<<<<<< HEAD
 Member3 name: Navnee Mundboth       email: navnee.mundboth@mail.utoronto.ca       utorid: mundboth
-=======
-Member3 name: Minh Trinh       email:  minh.trinh@mail.utoronto.ca      utorid: trinhmi4
->>>>>>> bfdea4338ed6339621926639b7a3a20235ae190b
-Member4 name:        email:        utorid:
+Member4 name: Minh Trinh       email:  minh.trinh@mail.utoronto.ca      utorid: trinhmi4
