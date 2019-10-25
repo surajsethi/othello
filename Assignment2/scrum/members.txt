@@ -2,3 +2,4 @@ Member1 name: Suraj Sethi        email: suraj.sethi@mail.utoronto.ca        utor
 Member2 name: Nicholas Tubielewicz  email: nick.tubielewicz@mail.utornto.ca    utorid: tubielew
 Member3 name: Navnee Mundboth       email: navnee.mundboth@mail.utoronto.ca       utorid: mundboth
 Member4 name: Minh Trinh       email:  minh.trinh@mail.utoronto.ca      utorid: trinhmi4
+Coach Name: Hans Patrick Paras email:hanspatrick.paras@mail.utoronto.ca
