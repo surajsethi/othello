@@ -26,3 +26,15 @@ ISSUE    : Member 2
 - demonstrates that they can run OthelloControllerHumanVSHuman on their dev platform
 - demonstrates that they can run MVCApplication on their dev platform
 --------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 0.03 : mundboth : STATUS : Complete
+NAME     : Configure and use system
+OWNER    : Navnee Mundboth
+PRIORITY : 1
+ESTIMATE : 1 hour   ACTUAL : 1 hour
+ISSUE    : Member 3
+- demonstrates that they have added, committed and pushed members.txt.
+- demonstrates that they can run OthelloControllerHumanVSHuman on their dev pla$
+- demonstrates that they can run MVCApplication on their dev platform
+--------------------------------------------------------------------------
+
