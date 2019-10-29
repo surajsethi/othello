@@ -5,18 +5,18 @@
 # Sprint 1 Oct 20-Oct 26, 2019
 # Sprint 1 Backlog UserStories go below
 --------------------------------------------------------------------------
-TYPE     : BUG 0.04 : trinhmi4 : STATUS : Complete
+TYPE     : BUG 0.01 : UTORID : STATUS : Complete
 NAME     : Configure and use system
-OWNER    : Minh Trinh
+OWNER    : Suraj Sethi Petragoo
 PRIORITY : 1
-ESTIMATE : 1 hour    ACTUAL :  1 hour
-ISSUE    : Member 4
+ESTIMATE : 1 hour	  ACTUAL :  2 hours
+ISSUE    : Member 1 
 - demonstrates that they have added, committed and pushed members.txt. 
 - demonstrates that they can run OthelloControllerHumanVSHuman on their dev platform
 - demonstrates that they can run MVCApplication on their dev platform
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG 0.02 : tubielew : STATUS : Completed
+TYPE     : BUG 0.02 : tubielew : STATUS : Complete
 NAME     : Configure and use system
 OWNER    : Nicholas Tubielewicz
 PRIORITY : 1
@@ -38,14 +38,13 @@ ISSUE    : Member 3
 - demonstrates that they can run MVCApplication on their dev platform
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG 0.01 : UTORID : STATUS : Complete
+TYPE     : BUG 0.04 : trinhmi4 : STATUS : Complete
 NAME     : Configure and use system
-OWNER    : Suraj Sethi Petragoo
+OWNER    : Minh Trinh
 PRIORITY : 1
-ESTIMATE : 1 hour	  ACTUAL :  2 hours
-ISSUE    : Member 1 
+ESTIMATE : 1 hour    ACTUAL :  1 hour
+ISSUE    : Member 4
 - demonstrates that they have added, committed and pushed members.txt. 
 - demonstrates that they can run OthelloControllerHumanVSHuman on their dev platform
 - demonstrates that they can run MVCApplication on their dev platform
 --------------------------------------------------------------------------
-
