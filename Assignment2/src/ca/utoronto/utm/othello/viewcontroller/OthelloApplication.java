@@ -27,12 +27,18 @@ public class OthelloApplication extends Application {
 		
 		// CONTROLLER
 		// CONTROLLER->MODEL hookup
-	
 		// VIEW
 		// VIEW->CONTROLLER hookup
 		// MODEL->VIEW hookup
 		
 		GridPane grid = new GridPane();
+		for (int row = 0; row<Othello.DIMENSION;row++) {
+			for(int col = 0;col<Othello.DIMENSION;col++) {
+				Button button = new Button();
+				button.setOnAction(new ButtonPressEventHandler(row,col));
+				grid.addColumn(col, button);
+			}
+		}
 		
 		// SCENE
 		Scene scene = new Scene(grid); 
