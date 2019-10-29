@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # User Stories/Bugs (add as appropriate), modify at each Sprint Planning Meeting
 # If a USER STORY is large, break it into smaller user stories.
 
