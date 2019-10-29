@@ -1,5 +1,5 @@
 # Fill in, commit and push each day.
-Member name:      email:     utorid:   
+Member name: Navnee Mundboth     email: navnee.mundboth@mail.utoronto.ca    utorid: mundboth  
 
 Oct 17,2019
 	What I did yesterday:
@@ -57,9 +57,9 @@ Oct 27,2019
 	Obstacles I face:
 
 Oct 28,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Modifying A2 to run on my personal computer
+	What I will do today: Deciding altogether on which user story we would each be working on.
+	Obstacles I face: Running Assignment 2 with updates successfully on my personal computer.
 
 Oct 29,2019
 	What I did yesterday:
