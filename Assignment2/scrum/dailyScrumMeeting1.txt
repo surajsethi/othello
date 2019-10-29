@@ -1,5 +1,5 @@
 # Fill in, commit and push each day.
-Member name:      email:     utorid:   
+Member name: Suraj Sethi Petragoo    email: suraj.sethi@mail.utoronto.ca   utorid: sethipet
 
 Oct 17,2019
 	What I did yesterday:
@@ -37,14 +37,14 @@ Oct 23,2019
 	Obstacles I face:
 
 Oct 24,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Cloned Repo
+	What I will do today: Setup Lab
+	Obstacles I face: Java Installation
 
 Oct 25,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Failed to install Java 11, Using Java 8 for now
+	What I will do today: Run OthelloApp and MVC 
+	Obstacles I face: Eclipse project settings
 
 Oct 26,2019
 	What I did yesterday:
@@ -57,9 +57,9 @@ Oct 27,2019
 	Obstacles I face:
 
 Oct 28,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Tried Installing Java 11
+	What I will do today: Establish roles for group
+	Obstacles I face: Dividing work equally
 
 Oct 29,2019
 	What I did yesterday:
