@@ -71,6 +71,7 @@ NOTE: Make sure that you are using good MVC principles in implementing this.
 If you didn't then file BUG 1.012 to fix the implementation.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
+<<<<<<< HEAD
 TYPE     : USER STORY 1.012 : UTORID : STATUS : NotStarted (NotStarted,InProgress, Incomplete,Complete)
 NAME     : OthelloGUI 
 OWNER    : 
@@ -81,6 +82,8 @@ for Human vs Human play. Now when the user clicks a button, the resulting
 board is printed on the console. 
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
+=======
+>>>>>>> branch 'master' of https://mundboth@mcsscm.utm.utoronto.ca:9999/git/207/19f/repo_a2_bingsu.git
 TYPE     : USER STORY 1.02 : UTORID : STATUS : NotStarted (NotStarted,InProgress, Incomplete,Complete)
 NAME     : Othello Board Human VS Human
 OWNER    : 
