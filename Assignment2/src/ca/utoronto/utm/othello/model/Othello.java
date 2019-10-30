@@ -16,7 +16,7 @@ import java.util.Random;
  * @author arnold
  *
  */
-public class Othello {
+public class Othello extends Observable {
 	public static final int DIMENSION=8; // This is an 8x8 game
 
 	private OthelloBoard board=new OthelloBoard(Othello.DIMENSION);
@@ -57,6 +57,7 @@ public class Othello {
 			char allowedMove = board.hasMove();
 			if(allowedMove!=OthelloBoard.BOTH)this.whosTurn=allowedMove;
 			this.numMoves++;
+			this.notifyObservers();
 			return true;
 		} else {
 			return false;

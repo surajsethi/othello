@@ -1,5 +1,5 @@
 # Fill in, commit and push each day.
-Member name:      email:     utorid:   
+Member name: Nicholas Tubielewicz     email: nick.tubielewicz@mail.utoronto.ca     utorid: tubielew  
 
 Oct 17,2019
 	What I did yesterday:
@@ -47,29 +47,29 @@ Oct 25,2019
 	Obstacles I face:
 
 Oct 26,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Nothing
+	What I will do today: Get a2 to run on personal computer
+	Obstacles I face: JRE1.8 setup
 
 Oct 27,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Message group members
+	What I will do today: Create online groupchat for group
+	Obstacles I face: Contacting everyone
 
 Oct 28,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Nothing
+	What I will do today: Team meeting
+	Obstacles I face: Dividing work among group
 
 Oct 29,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Team meeting
+	What I will do today: UserStory 1.011/12
+	Obstacles I face: Grasping the concept of MVC, group member Suraj completed UserStory 1.011/12 for me.
 
 Oct 30,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Worked on UserStory 1.011/12
+	What I will do today: Work on UserStory 1.02
+	Obstacles I face: Biggest obstacle was changing the view of the gui to represent the latest othello board.
 
 Oct 31,2019
 	What I did yesterday:
