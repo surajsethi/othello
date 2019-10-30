@@ -39,11 +39,11 @@ for Human vs Human play. The grid buttons simply show X and O text
 labels for the buttons. There is no longer a console display as in 1.012.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG 1.021 : UTORID : STATUS : NotStarted (NotStarted,InProgress, Incomplete,Complete)
+TYPE     : BUG 1.021 : UTORID : STATUS : Complete
 NAME     : Check Architecture
 OWNER    : Navnee Mundboth
 PRIORITY : 3
-ESTIMATE : 1 hour  ACTUAL :  
+ESTIMATE : 1 hour  ACTUAL :  1 hour
 ISSUE    : If your code is not MVC right now, fix it to MVC. Pay the price
 now to create a good architecture, rather than clean up a lot of code later.
 --------------------------------------------------------------------------
