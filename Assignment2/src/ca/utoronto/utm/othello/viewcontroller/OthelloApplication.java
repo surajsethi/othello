@@ -35,7 +35,7 @@ public class OthelloApplication extends Application {
 		for (int row = 0; row<Othello.DIMENSION;row++) {
 			for(int col = 0;col<Othello.DIMENSION;col++) {
 				Button button = new Button();
-				button.setOnAction(new ButtonPressEventHandler(row,col));
+				button.setOnAction(new ButtonPressEventHandler(row,col,othello));
 				grid.addColumn(col, button);
 			}
 		}
