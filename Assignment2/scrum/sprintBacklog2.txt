@@ -17,7 +17,7 @@ the (row,col) that the user clicked.
 --------------------------------------------------------------------------
 TYPE     : USER STORY 1.011 : UTORID : STATUS : NotStarted (NotStarted,InProgress, Incomplete,Complete)
 NAME     : OthelloGUI Buttons Active, Console View
-OWNER    : Nicholas Tubielewicz
+OWNER    : Suraj Sethi Petragoo
 PRIORITY : 1
 ESTIMATE : 1 hour   ACTUAL :  
 ISSUE    : The users can now use the OthelloGUI created in US1.01 
@@ -31,9 +31,9 @@ If you didn't then file BUG 1.012 to fix the implementation.
 --------------------------------------------------------------------------
 TYPE     : USER STORY 1.02 : UTORID : STATUS : NotStarted (NotStarted,InProgress, Incomplete,Complete)
 NAME     : Othello Board Human VS Human
-OWNER    : Suraj Sethi Petragoo
+OWNER    : Nicholas Tubielewicz 
 PRIORITY : 1
-ESTIMATE : 2 hours  ACTUAL :  
+ESTIMATE : 2 hours  ACTUAL : 4 hours 
 ISSUE    : The users can now use the OthelloGUI created in US1.012 
 for Human vs Human play. The grid buttons simply show X and O text
 labels for the buttons. There is no longer a console display as in 1.012.
