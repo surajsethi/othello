@@ -1,17 +1,14 @@
 package ca.utoronto.utm.othello.viewcontroller;
 
-import ca.utoronto.utm.othello.model.Move;
 import ca.utoronto.utm.othello.model.Othello;
-import ca.utoronto.utm.othello.model.OthelloBoard;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.control.Button;
 
 public class ButtonPressEventHandler implements EventHandler<ActionEvent> {
 	private int row;
 	private int col;
 	private Othello o;
-	private Button button;
+	//private Button button;
 
 	public ButtonPressEventHandler(int row, int col, Othello othello) {
 		this.o = othello;
@@ -21,16 +18,16 @@ public class ButtonPressEventHandler implements EventHandler<ActionEvent> {
 	}
 
 	public void handle(ActionEvent event) {
-		this.button = (Button) event.getSource();
-		char player = this.o.getWhosTurn();
-		String p = "";
+		//this.button = (Button) event.getSource();
+		//char player = this.o.getWhosTurn();
+		/*String p = "";
 		if (player == OthelloBoard.P1) {
 			p = "X";
 		}
 		if (player == OthelloBoard.P2) {
 			p = "O";
 		}
-		
+		*/
 		this.o.move(row, col);
 			
 			

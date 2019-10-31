@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class OthelloApplication extends Application {
@@ -21,15 +22,19 @@ public class OthelloApplication extends Application {
 
 		// MODEL
 		Othello othello = new Othello();
-
-		// MODEL->VIEW hookup
 		
 		// CONTROLLER
-		// CONTROLLER->MODEL hookup
+		VBox root = new VBox();
+		GridPane grid = new GridPane();
 		
 		//VIEW
+		VBoard vBoard = new VBoard(othello, grid);
+		VBoard2 vBoard2 = new VBoard2();
+		// MODEL->VIEW hookup
+		othello.attach(vBoard);
+		othello.attach(vBoard2);
+		
 		// VIEW->CONTROLLER hookup
-		GridPane grid = new GridPane();
 		for (int row = 0; row < Othello.DIMENSION; row++) {
 			for (int col = 0; col < Othello.DIMENSION; col++) {
 				Button button = new Button(" ");
@@ -44,13 +49,9 @@ public class OthelloApplication extends Application {
 				grid.addColumn(col, button);
 			}
 		}
-		VBoard vBoard = new VBoard(othello, grid);
-		
-		// VIEW->CONTROLLER hookup
-		othello.attach(vBoard);
-		
+		root.getChildren().addAll(grid,vBoard2);
 		// SCENE
-		Scene scene = new Scene(grid);
+		Scene scene = new Scene(root);
 		stage.setTitle("Othello");
 		stage.setScene(scene);
 
@@ -59,7 +60,7 @@ public class OthelloApplication extends Application {
 	}
 
 	public static void main(String[] args) {
-		OthelloApplication view = new OthelloApplication();
+		//OthelloApplication view = new OthelloApplication();
 		launch(args);
 	}
 }

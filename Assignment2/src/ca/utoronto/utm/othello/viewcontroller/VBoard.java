@@ -24,8 +24,8 @@ public class VBoard extends Label implements Observer {
 			for (int col = 0; col < Othello.DIMENSION; col++) {
 				Button button = new Button();
 				for (Node node : this.grid.getChildren()) {
-					if (this.grid.getColumnIndex(node) == col) {
-						if (this.grid.getRowIndex(node) == row) {
+					if (GridPane.getColumnIndex(node) == col) {
+						if (GridPane.getRowIndex(node) == row) {
 							button = (Button) node;
 							if (this.othello.getToken(row, col) == 'X') {
 								button.setText("X");
