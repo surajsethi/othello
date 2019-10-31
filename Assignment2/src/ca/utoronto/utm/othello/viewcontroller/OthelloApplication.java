@@ -1,56 +1,66 @@
 package ca.utoronto.utm.othello.viewcontroller;
+
 import ca.utoronto.utm.othello.model.*;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class OthelloApplication extends Application {
-	// REMEMBER: To run this in the lab put 
-	// --module-path "/usr/share/openjfx/lib" --add-modules javafx.controls,javafx.fxml
+	// REMEMBER: To run this in the lab put
+	// --module-path "/usr/share/openjfx/lib" --add-modules
+	// javafx.controls,javafx.fxml
 	// in the run configuration under VM arguments.
 	// You can import the JavaFX.prototype launch configuration and use it as well.
-	
+
 	@Override
 	public void start(Stage stage) throws Exception {
 		// Create and hook up the Model, View and the controller
-		
+
 		// MODEL
-		Othello othello=new Othello();
+		Othello othello = new Othello();
 		
 		// CONTROLLER
-		// CONTROLLER->MODEL hookup
-		// VIEW
-		// VIEW->CONTROLLER hookup
-		// MODEL->VIEW hookup
-		
+		VBox root = new VBox();
 		GridPane grid = new GridPane();
-		for (int row = 0; row<Othello.DIMENSION;row++) {
-			for(int col = 0;col<Othello.DIMENSION;col++) {
-				Button button = new Button();
-				button.setOnAction(new ButtonPressEventHandler(row,col));
+		
+		//VIEW
+		VBoard vBoard = new VBoard(othello, grid);
+		VBoard2 vBoard2 = new VBoard2();
+		// MODEL->VIEW hookup
+		othello.attach(vBoard);
+		othello.attach(vBoard2);
+		
+		// VIEW->CONTROLLER hookup
+		for (int row = 0; row < Othello.DIMENSION; row++) {
+			for (int col = 0; col < Othello.DIMENSION; col++) {
+				Button button = new Button(" ");
+				if (othello.getToken(row, col) == 'X') {
+					button.setText("X");
+				}
+				if (othello.getToken(row, col) == 'O') {
+					button.setText("O");
+				} 
+				button.setPrefSize(40, 40);
+				button.setOnAction(new ButtonPressEventHandler(row, col, othello));
 				grid.addColumn(col, button);
 			}
 		}
-		
+		root.getChildren().addAll(grid,vBoard2);
 		// SCENE
-		Scene scene = new Scene(grid); 
+		Scene scene = new Scene(root);
 		stage.setTitle("Othello");
 		stage.setScene(scene);
-				
+
 		// LAUNCH THE GUI
 		stage.show();
 	}
 
 	public static void main(String[] args) {
-		OthelloApplication view = new OthelloApplication();
+		//OthelloApplication view = new OthelloApplication();
 		launch(args);
 	}
 }

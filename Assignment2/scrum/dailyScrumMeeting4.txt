@@ -1,5 +1,5 @@
 # Fill in, commit and push each day.
-Member name:      email:     utorid:   
+Member name:  Minh Trinh    email:  minh.trinh@mail.utoronto.ca   utorid:   trinhmi4
 
 Oct 17,2019
 	What I did yesterday:
@@ -42,14 +42,14 @@ Oct 24,2019
 	Obstacles I face:
 
 Oct 25,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday:clone repo
+	What I will do today: members.txt
+	Obstacles I face: nothing
 
 Oct 26,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: members.txt
+	What I will do today: run HumanvsHuman, MVCApplication
+	Obstacles I face: main not found
 
 Oct 27,2019
 	What I did yesterday:
@@ -58,8 +58,8 @@ Oct 27,2019
 
 Oct 28,2019
 	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I will do today: finish US1.01
+	Obstacles I face: grid.add() has default for 0,0 position
 
 Oct 29,2019
 	What I did yesterday:
@@ -72,8 +72,8 @@ Oct 30,2019
 	Obstacles I face:
 
 Oct 31,2019
-	What I did yesterday:
-	What I will do today:
+	What I did yesterday: prepare for US1.03
+	What I will do today: doing US1.03
 	Obstacles I face:
 
 Nov 1,2019

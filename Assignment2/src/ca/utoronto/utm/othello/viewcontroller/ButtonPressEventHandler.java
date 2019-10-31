@@ -1,15 +1,37 @@
 package ca.utoronto.utm.othello.viewcontroller;
+
+import ca.utoronto.utm.othello.model.Othello;
+import ca.utoronto.utm.othello.model.OthelloBoard;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.control.Button;
 
 public class ButtonPressEventHandler implements EventHandler<ActionEvent> {
 	private int row;
 	private int col;
-	public ButtonPressEventHandler(int row, int col) {
+	private Othello o;
+	//private Button button;
+
+	public ButtonPressEventHandler(int row, int col, Othello othello) {
+		this.o = othello;
 		this.row = row;
-		this.col=col;
+		this.col = col;
+
 	}
+
 	public void handle(ActionEvent event) {
-		System.out.println("Row: "+this.row+", Col: "+ this.col);
-	}
+		//this.button = (Button) event.getSource();
+		//char player = this.o.getWhosTurn();
+		/*String p = "";
+		if (player == OthelloBoard.P1) {
+			p = "X";
+		}
+		if (player == OthelloBoard.P2) {
+			p = "O";
+		}
+		*/
+		this.o.move(row, col);
+			
+			
+			}
 }
