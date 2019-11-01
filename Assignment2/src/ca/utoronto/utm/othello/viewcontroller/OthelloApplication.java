@@ -37,10 +37,10 @@ public class OthelloApplication extends Application {
 			for (int col = 0; col < Othello.DIMENSION; col++) {
 				Button button = new Button(" ");
 				if (othello.getToken(row, col) == 'X') {
-					button.setText("X");
+					button.setStyle("-fx-background-color: #000000; ");
 				}
 				if (othello.getToken(row, col) == 'O') {
-					button.setText("O");
+					button.setStyle("-fx-background-color: #FFFFFF; ");
 				} 
 				button.setPrefSize(40, 40);
 				button.setOnAction(new ButtonPressEventHandler(row, col, othello));
