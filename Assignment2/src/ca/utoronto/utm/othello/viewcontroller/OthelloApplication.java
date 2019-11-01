@@ -33,7 +33,6 @@ public class OthelloApplication extends Application {
 		// MODEL->VIEW hookup
 		othello.attach(vBoard);
 		othello.attach(vBoard2);
-		
 		// VIEW->CONTROLLER hookup
 		for (int row = 0; row < Othello.DIMENSION; row++) {
 			for (int col = 0; col < Othello.DIMENSION; col++) {
@@ -49,6 +48,9 @@ public class OthelloApplication extends Application {
 				grid.addColumn(col, button);
 			}
 		}
+		grid.setHgap(10);
+		grid.setVgap(10);
+		
 		root.getChildren().addAll(grid,vBoard2);
 		// SCENE
 		Scene scene = new Scene(root);
