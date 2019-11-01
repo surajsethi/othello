@@ -72,14 +72,14 @@ Oct 30,2019
 	Obstacles I face:
 
 Oct 31,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Reviewed Observer patterns
+	What I will do today: Work on Bug 1.04
+	Obstacles I face: Implementing Observable/Observer pattern
 
 Nov 1,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Finished Bug 1.04 and 1.05
+	What I will do today: Review Product Backlog
+	Obstacles I face: Deciding which US is best for me
 
 Nov 2,2019
 	What I did yesterday:
