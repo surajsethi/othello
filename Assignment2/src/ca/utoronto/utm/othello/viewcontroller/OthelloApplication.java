@@ -26,7 +26,6 @@ public class OthelloApplication extends Application {
 		// CONTROLLER
 		VBox root = new VBox();
 		GridPane grid = new GridPane();
-		
 		//VIEW
 		VBoard vBoard = new VBoard(othello, grid);
 		VBoard2 vBoard2 = new VBoard2();
@@ -53,7 +52,7 @@ public class OthelloApplication extends Application {
 		
 		root.getChildren().addAll(grid,vBoard2);
 		// SCENE
-		Scene scene = new Scene(root);
+		Scene scene = new Scene(root, 400, 500);
 		stage.setTitle("Othello");
 		stage.setScene(scene);
 

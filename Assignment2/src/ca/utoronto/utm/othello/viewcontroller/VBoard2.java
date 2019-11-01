@@ -16,6 +16,6 @@ public class VBoard2 extends Label implements Observer{
 		+ String.valueOf(othello.getCount(next_player))+" tokens"+"\n"+
 				"P1 Count = "+ String.valueOf(othello.getCount(OthelloBoard.P1))+ " "+
 				"P2 Count = "+ String.valueOf(othello.getCount(OthelloBoard.P2))+ " "+
-				"Winner is"+ String.valueOf(othello.getWinner()));
+				"\n"+ "Winner is"+ " "+ String.valueOf(othello.getWinner()));
 	}
 }
