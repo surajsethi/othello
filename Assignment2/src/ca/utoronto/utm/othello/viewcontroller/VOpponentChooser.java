@@ -19,7 +19,8 @@ public class VOpponentChooser extends Label implements Observer {
 	}
 	@Override
 	public void update(Observable o) {
-		Othello othello = (Othello)o;
+		//Othello othello = (Othello)o;
+		/*
 		Button human = new Button("Human");
 		human.setOnAction(new OpponentButtonPressEventHandler());
 		Button greedy = new Button("Greedy");
@@ -27,12 +28,13 @@ public class VOpponentChooser extends Label implements Observer {
 		Button random = new Button("Random");
 		random.setOnAction(new OpponentButtonPressEventHandler());
 		
-		Label opponent = new Label("Which opponent would you like to play against?");
+		//Label opponent = new Label("Which opponent would you like to play against?");
 		
 		this.pane.getChildren().addAll(human, greedy, random);
 		this.pane.setPrefSize(10, 10);
 		this.pane.setVisible(true);	
 		this.root.getChildren().add(this.pane);
+		*/
 	}
 
 }

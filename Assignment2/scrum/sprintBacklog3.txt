@@ -5,3 +5,15 @@
 # Sprint 3 Nov 03-Nov 09, 2019
 # Sprint 3 Backlog UserStories go below
 
+--------------------------------------------------------------------------
+TYPE     : USER STORY 1.071 : trinhmi4 : STATUS : Complete
+NAME     : Opponent Chooser GUI Display
+OWNER    : Minh Trinh
+PRIORITY : 1
+ESTIMATE : 1hour  ACTUAL :  1 hour
+ISSUE    : An extension to Opponent Chooser, the current player types
+are on display, so for example, 
+P1: Human  P2: Greedy 
+P1: Random P2: Human
+--------------------------------------------------------------------------
+
