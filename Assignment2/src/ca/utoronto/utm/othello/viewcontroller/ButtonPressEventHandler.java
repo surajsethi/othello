@@ -1,9 +1,14 @@
 package ca.utoronto.utm.othello.viewcontroller;
 
 import ca.utoronto.utm.othello.model.Othello;
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
+/*
+ * Whenever the player clicks this button, the game attempt to make a move for that player
+ * at this position.
+ */
 public class ButtonPressEventHandler implements EventHandler<ActionEvent> {
 	private int row;
 	private int col;

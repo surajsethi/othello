@@ -9,7 +9,9 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
-
+/*
+ * this view displays the board
+ */
 public class VBoard extends Label implements Observer {
 
 	private Othello othello;

@@ -6,6 +6,9 @@ import ca.utoronto.utm.util.Observable;
 import ca.utoronto.utm.util.Observer;
 import javafx.scene.control.Label;
 
+/*
+ * this view displays the next player and the tokens of both players.s
+ */
 public class VBoard2 extends Label implements Observer{
 	
 	@Override

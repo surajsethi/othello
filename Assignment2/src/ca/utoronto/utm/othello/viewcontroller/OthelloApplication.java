@@ -2,6 +2,7 @@ package ca.utoronto.utm.othello.viewcontroller;
 
 import java.awt.Panel;
 
+
 import ca.utoronto.utm.othello.model.*;
 
 import javafx.application.Application;
@@ -37,7 +38,7 @@ public class OthelloApplication extends Application {
 		//VIEW
 		VBoard vBoard = new VBoard(othello, grid);
 		VBoard2 vBoard2 = new VBoard2();
-		VOpponentChooser vOpponentChooser = new VOpponentChooser(opponentPane, root);
+		//VOpponentChooser vOpponentChooser = new VOpponentChooser(opponentPane, root);
 		// MODEL->VIEW hookup
 		othello.attach(vBoard);
 		othello.attach(vBoard2);
@@ -61,11 +62,11 @@ public class OthelloApplication extends Application {
 		grid.setVgap(10);
 		
 		Button human = new Button("Human");
-		human.setOnAction(new OpponentButtonPressEventHandler());
+		human.setOnAction(new OpponentButtonPressEventHandler(root));
 		Button greedy = new Button("Greedy");
-		greedy.setOnAction(new OpponentButtonPressEventHandler());
+		greedy.setOnAction(new OpponentButtonPressEventHandler(root));
 		Button random = new Button("Random");
-		random.setOnAction(new OpponentButtonPressEventHandler());
+		random.setOnAction(new OpponentButtonPressEventHandler(root));
 		
 		Label opponent = new Label("Which opponent would you like to play against?");
 		
