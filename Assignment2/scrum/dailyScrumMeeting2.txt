@@ -72,24 +72,24 @@ Oct 30,2019
 	Obstacles I face: Biggest obstacle was changing the view of the gui to represent the latest othello board.
 
 Oct 31,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday:Completed UserStory 1.02
+	What I will do today: Study for the test coming up
+	Obstacles I face: N/A
 
 Nov 1,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Study for the test
+	What I will do today: Write the Test
+	Obstacles I face: N/A
 
 Nov 2,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Test
+	What I will do today: Work on UserStory 1.07
+	Obstacles I face: Figuring out the best way to implement MVC
 
 Nov 3,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Complete UserStory 1.07
+	What I will do today: Commit and push USerStory 1.07
+	Obstacles I face: N/A
 
 Nov 4,2019
 	What I did yesterday:

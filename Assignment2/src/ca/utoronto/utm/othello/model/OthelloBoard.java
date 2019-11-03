@@ -1,4 +1,7 @@
 package ca.utoronto.utm.othello.model;
+
+import ca.utoronto.utm.util.Observable;
+
 /**
  * Keep track of all of the tokens on the board. This understands some
  * interesting things about an Othello board, what the board looks like at the
@@ -14,7 +17,7 @@ package ca.utoronto.utm.othello.model;
  */
 
 
-public class OthelloBoard {
+public class OthelloBoard{
 	public static final char EMPTY = ' ', P1 = 'X', P2 = 'O', BOTH = 'B';
 	private int dim = 8;
 	private char[][] board;

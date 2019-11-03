@@ -1,11 +1,17 @@
 package ca.utoronto.utm.othello.viewcontroller;
 
+import java.awt.Panel;
+
 import ca.utoronto.utm.othello.model.*;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -26,12 +32,16 @@ public class OthelloApplication extends Application {
 		// CONTROLLER
 		VBox root = new VBox();
 		GridPane grid = new GridPane();
+		FlowPane opponentPane = new FlowPane();
+		
 		//VIEW
 		VBoard vBoard = new VBoard(othello, grid);
 		VBoard2 vBoard2 = new VBoard2();
+		VOpponentChooser vOpponentChooser = new VOpponentChooser(opponentPane, root);
 		// MODEL->VIEW hookup
 		othello.attach(vBoard);
 		othello.attach(vBoard2);
+		//othello.attach(vOpponentChooser);
 		// VIEW->CONTROLLER hookup
 		for (int row = 0; row < Othello.DIMENSION; row++) {
 			for (int col = 0; col < Othello.DIMENSION; col++) {
@@ -50,9 +60,23 @@ public class OthelloApplication extends Application {
 		grid.setHgap(10);
 		grid.setVgap(10);
 		
-		root.getChildren().addAll(grid,vBoard2);
+		Button human = new Button("Human");
+		human.setOnAction(new OpponentButtonPressEventHandler());
+		Button greedy = new Button("Greedy");
+		greedy.setOnAction(new OpponentButtonPressEventHandler());
+		Button random = new Button("Random");
+		random.setOnAction(new OpponentButtonPressEventHandler());
+		
+		Label opponent = new Label("Which opponent would you like to play against?");
+		
+		opponentPane.getChildren().addAll(human, greedy, random);
+		opponentPane.setPrefSize(10, 10);
+		opponentPane.setHgap(10);
+		opponentPane.setVisible(true);
+		
+		root.getChildren().addAll(grid, vBoard2, opponent, opponentPane);
 		// SCENE
-		Scene scene = new Scene(root, 400, 500);
+		Scene scene = new Scene(root, 400, 520);
 		stage.setTitle("Othello");
 		stage.setScene(scene);
 

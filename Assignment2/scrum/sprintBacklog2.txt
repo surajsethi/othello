@@ -75,3 +75,17 @@ ESTIMATE : 2 hours    ACTUAL :
 ISSUE    : When users play, the current status of the game is on display, showing the token
 of the winner of the game.
 --------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 1.07 : tubielew : STATUS : Complete
+NAME     : Opponent Chooser GUI Selection
+OWNER    : Nicholas Tubielewicz
+PRIORITY : (1,2,3)
+ESTIMATE : 2 hours    ACTUAL :  4 hours
+ISSUE    : When users are playing, they see a GUI which allows the user to 
+choose whether to play HumanVSHuman, HumanVSGreedy, HumanVSRandom.
+This user story involves
+just providing the gui for choice. After choosing, log the choice to
+the console, the game actually
+plays HumanVSHuman for now. The user should be able to switch opponents
+at any time during game play. 
+--------------------------------------------------------------------------

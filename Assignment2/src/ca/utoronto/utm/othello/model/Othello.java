@@ -1,5 +1,6 @@
 package ca.utoronto.utm.othello.model;
 import ca.utoronto.utm.util.*;
+
 import java.util.Random;
 
 /**
@@ -16,7 +17,7 @@ import java.util.Random;
  * @author arnold
  *
  */
-public class Othello extends Observable {
+public class Othello extends Observable{
 	public static final int DIMENSION=8; // This is an 8x8 game
 
 	private OthelloBoard board=new OthelloBoard(Othello.DIMENSION);
