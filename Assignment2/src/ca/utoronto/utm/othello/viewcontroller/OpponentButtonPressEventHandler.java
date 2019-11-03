@@ -14,14 +14,14 @@ public class OpponentButtonPressEventHandler  implements EventHandler<ActionEven
 	
 	public OpponentButtonPressEventHandler(VBox p) {
 		this.pane = p;
-		this.label = new Label();
+		OpponentButtonPressEventHandler.label = new Label();
 		pane.getChildren().addAll(label);
 	}
 	
 	@Override
 	public void handle(ActionEvent event) {
 		this.b = ((Button) (event.getSource()));
-		this.label.setText("P1:  Human    P2: "+this.b.getText());
+		OpponentButtonPressEventHandler.label.setText("P1:  Human    P2: "+this.b.getText());
 		
 	}
 
