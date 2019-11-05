@@ -2,7 +2,6 @@ package ca.utoronto.utm.othello.viewcontroller;
 
 import java.awt.Panel;
 
-
 import ca.utoronto.utm.othello.model.*;
 
 import javafx.application.Application;
@@ -12,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -29,20 +29,22 @@ public class OthelloApplication extends Application {
 
 		// MODEL
 		Othello othello = new Othello();
-		
+
 		// CONTROLLER
-		VBox root = new VBox();
+		HBox root = new HBox();
+		VBox left = new VBox();
+		VBox right = new VBox();
 		GridPane grid = new GridPane();
 		FlowPane opponentPane = new FlowPane();
-		
-		//VIEW
+
+		// VIEW
 		VBoard vBoard = new VBoard(othello, grid);
 		VBoard2 vBoard2 = new VBoard2();
-		//VOpponentChooser vOpponentChooser = new VOpponentChooser(opponentPane, root);
+		// VOpponentChooser vOpponentChooser = new VOpponentChooser(opponentPane, root);
 		// MODEL->VIEW hookup
 		othello.attach(vBoard);
 		othello.attach(vBoard2);
-		//othello.attach(vOpponentChooser);
+		// othello.attach(vOpponentChooser);
 		// VIEW->CONTROLLER hookup
 		for (int row = 0; row < Othello.DIMENSION; row++) {
 			for (int col = 0; col < Othello.DIMENSION; col++) {
@@ -52,7 +54,7 @@ public class OthelloApplication extends Application {
 				}
 				if (othello.getToken(row, col) == 'O') {
 					button.setStyle("-fx-background-color: #FFFFFF; ");
-				} 
+				}
 				button.setPrefSize(40, 40);
 				button.setOnAction(new ButtonPressEventHandler(row, col, othello));
 				grid.addColumn(col, button);
@@ -60,25 +62,29 @@ public class OthelloApplication extends Application {
 		}
 		grid.setHgap(10);
 		grid.setVgap(10);
-		
+
 		Button human = new Button("Human");
-		human.setOnAction(new OpponentButtonPressEventHandler(root));
+		human.setOnAction(new OpponentButtonPressEventHandler(left));
 		Button greedy = new Button("Greedy");
-		greedy.setOnAction(new OpponentButtonPressEventHandler(root));
+		greedy.setOnAction(new OpponentButtonPressEventHandler(left));
 		Button random = new Button("Random");
-		random.setOnAction(new OpponentButtonPressEventHandler(root));
-		
+		random.setOnAction(new OpponentButtonPressEventHandler(left));
+
 		Label opponent = new Label("Which opponent would you like to play against?");
-		
+
 		opponentPane.getChildren().addAll(human, greedy, random);
 		opponentPane.setPrefSize(10, 10);
 		opponentPane.setHgap(10);
-		opponentPane.setLayoutY(550);
+		opponentPane.setLayoutY(100);
+		//opponentPane.
+		opponentPane.setLayoutX(700);
 		opponentPane.setVisible(true);
 		
-		root.getChildren().addAll(grid, vBoard2, opponent, opponentPane);
+		left.getChildren().addAll(grid, vBoard2);
+		right.getChildren().addAll(opponent, opponentPane);
+		root.getChildren().addAll(left, right);
 		// SCENE
-		Scene scene = new Scene(root, 400, 580);
+		Scene scene = new Scene(root, 800, 600);
 		stage.setTitle("Othello");
 		stage.setScene(scene);
 
@@ -87,7 +93,7 @@ public class OthelloApplication extends Application {
 	}
 
 	public static void main(String[] args) {
-		//OthelloApplication view = new OthelloApplication();
+		// OthelloApplication view = new OthelloApplication();
 		launch(args);
 	}
 }

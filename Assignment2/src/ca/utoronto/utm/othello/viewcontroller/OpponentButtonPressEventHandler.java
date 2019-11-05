@@ -1,6 +1,7 @@
 package ca.utoronto.utm.othello.viewcontroller;
 
 import ca.utoronto.utm.othello.model.Othello;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -12,17 +13,17 @@ public class OpponentButtonPressEventHandler  implements EventHandler<ActionEven
 	private Button b;
 	private static Label label;
 	
-	public OpponentButtonPressEventHandler(VBox p) {
-		this.pane = p;
+	public OpponentButtonPressEventHandler(VBox left) {
+		this.pane = left;
 		OpponentButtonPressEventHandler.label = new Label();
-		pane.getChildren().addAll(label);
+		//OpponentButtonPressEventHandler.label.setPrefSize(100, 2);
+		this.pane.getChildren().addAll(label);
 	}
 	
 	@Override
 	public void handle(ActionEvent event) {
 		this.b = ((Button) (event.getSource()));
-		OpponentButtonPressEventHandler.label.setText("P1:  Human    P2: "+this.b.getText());
-		
+		OpponentButtonPressEventHandler.label.setText("P1:  Human    P2: "+this.b.getText());		
 	}
 
 }
