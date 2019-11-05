@@ -73,11 +73,12 @@ public class OthelloApplication extends Application {
 		opponentPane.getChildren().addAll(human, greedy, random);
 		opponentPane.setPrefSize(10, 10);
 		opponentPane.setHgap(10);
+		opponentPane.setLayoutY(550);
 		opponentPane.setVisible(true);
 		
 		root.getChildren().addAll(grid, vBoard2, opponent, opponentPane);
 		// SCENE
-		Scene scene = new Scene(root, 400, 520);
+		Scene scene = new Scene(root, 400, 580);
 		stage.setTitle("Othello");
 		stage.setScene(scene);
 
