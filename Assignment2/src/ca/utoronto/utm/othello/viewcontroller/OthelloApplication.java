@@ -36,6 +36,7 @@ public class OthelloApplication extends Application {
 		VBox right = new VBox();
 		GridPane grid = new GridPane();
 		FlowPane opponentPane = new FlowPane();
+		FlowPane hintPane = new FlowPane();
 
 		// VIEW
 		VBoard vBoard = new VBoard(othello, grid);
@@ -69,8 +70,15 @@ public class OthelloApplication extends Application {
 		greedy.setOnAction(new OpponentButtonPressEventHandler(left));
 		Button random = new Button("Random");
 		random.setOnAction(new OpponentButtonPressEventHandler(left));
+		
+		Button ai = new Button("AI");
+		ai.setOnAction(new HintPressEventHandler(left, grid, othello));
+		Button hint = new Button("Hint");
+		hint.setOnAction(new HintPressEventHandler(left, grid, othello));
 
 		Label opponent = new Label("Which opponent would you like to play against?");
+		
+		Label stuck = new Label("Stuck? Use a hint!");
 
 		opponentPane.getChildren().addAll(human, greedy, random);
 		opponentPane.setPrefSize(10, 10);
@@ -80,8 +88,16 @@ public class OthelloApplication extends Application {
 		opponentPane.setLayoutX(700);
 		opponentPane.setVisible(true);
 		
+		hintPane.getChildren().addAll(ai, hint);
+		hintPane.setPrefSize(10, 10);
+		hintPane.setHgap(10);
+		hintPane.setLayoutY(100);
+		//hintPane.
+		hintPane.setLayoutX(700);
+		hintPane.setVisible(true);
+		
 		left.getChildren().addAll(grid, vBoard2);
-		right.getChildren().addAll(opponent, opponentPane);
+		right.getChildren().addAll(opponent, opponentPane, stuck, hintPane);
 		root.getChildren().addAll(left, right);
 		// SCENE
 		Scene scene = new Scene(root, 800, 600);
