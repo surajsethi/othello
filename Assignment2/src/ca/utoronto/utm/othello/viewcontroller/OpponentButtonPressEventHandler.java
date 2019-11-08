@@ -1,7 +1,6 @@
 package ca.utoronto.utm.othello.viewcontroller;
 
 import ca.utoronto.utm.othello.model.Othello;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
