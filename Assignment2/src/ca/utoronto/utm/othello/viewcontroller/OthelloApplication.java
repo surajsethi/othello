@@ -65,11 +65,11 @@ public class OthelloApplication extends Application {
 		grid.setVgap(10);
 
 		Button human = new Button("Human");
-		human.setOnAction(new OpponentButtonPressEventHandler(left));
+		human.setOnAction(new OpponentButtonPressEventHandler(left, grid, othello));
 		Button greedy = new Button("Greedy");
-		greedy.setOnAction(new OpponentButtonPressEventHandler(left));
+		greedy.setOnAction(new OpponentButtonPressEventHandler(left, grid, othello));
 		Button random = new Button("Random");
-		random.setOnAction(new OpponentButtonPressEventHandler(left));
+		random.setOnAction(new OpponentButtonPressEventHandler(left, grid, othello));
 		
 		Button ai = new Button("AI");
 		ai.setOnAction(new HintPressEventHandler(left, grid, othello));
