@@ -17,3 +17,19 @@ P1: Human  P2: Greedy
 P1: Random P2: Human
 --------------------------------------------------------------------------
 
+--------------------------------------------------------------------------
+TYPE     : USER STORY 1.078 : UTORID : mundboth STATUS : Complete
+NAME     : Opponent Chooser Partial Implementation
+OWNER    :
+PRIORITY : 1
+ESTIMATE : 2 hours    ACTUAL : 2 hours
+ISSUE    : An extension to Opponent Chooser, we hardcode 
+the application, so the user always plays the Greedy Strategy.
+To further simplify this, the user clicks a board position to move.
+Now the user clicks a special button which tells the computer to move.
+So interaction is 
+I click my move, then click COMPUTER_MOVE, then the computer moves, 
+I click my move, then click COMPUTER_MOVE, then the computer moves, 
+I click my move, then click COMPUTER_MOVE, then the computer moves, 
+...
+--------------------------------------------------------------------------
