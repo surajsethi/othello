@@ -1,7 +1,7 @@
 package ca.utoronto.utm.othello.viewcontroller;
-
+import javafx.animation.FadeTransition;
+import javafx.animation.Timeline;
 import ca.utoronto.utm.othello.model.Othello;
-
 import ca.utoronto.utm.othello.model.OthelloBoard;
 import ca.utoronto.utm.util.Observable;
 import ca.utoronto.utm.util.Observer;
@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import javafx.util.Duration;
 /*
  * this view displays the board
  */
@@ -39,6 +40,14 @@ public class VBoard extends Label implements Observer {
 							if (this.othello.getToken(row, col) == OthelloBoard.P2) {
 								button.setStyle(p2Colour);
 							}
+							/*
+							FadeTransition btn = new FadeTransition(Duration.millis(2000),button);
+							btn.setFromValue(1.0);
+							btn.setToValue(0.3);
+							btn.setCycleCount(2);
+							btn.setAutoReverse(true);
+							btn.play();
+							*/
 							button.setText("");
 							button.setPrefSize(40, 40);
 							button.setOnAction(new ButtonPressEventHandler(row, col, this.othello));

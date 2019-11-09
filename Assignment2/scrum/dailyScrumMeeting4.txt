@@ -87,39 +87,39 @@ Nov 2,2019
 	Obstacles I face:
 
 Nov 3,2019
-	What I did yesterday:
-	What I will do today:
+	What I did yesterday: relax
+	What I will do today:do US1.071
 	Obstacles I face:
 
 Nov 4,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: did us1.071
+	What I will do today: do problem set csc236
+	Obstacles I face: none
 
 Nov 5,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday:do problem set csc236
+	What I will do today: study for stat256
+	Obstacles I face: none
 
 Nov 6,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: study for stat256
+	What I will do today: study for stat256
+	Obstacles I face: none
 
 Nov 7,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday:study for stat256
+	What I will do today: do exam and finish csc236 homework
+	Obstacles I face: none
 
 Nov 8,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: javafx animation video
+	What I will do today: javafx animation video
+	Obstacles I face: none
 
 Nov 9,2019
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: watch javafx animation video
+	What I will do today: work on us13
+	Obstacles I face: cannot figure out flipped button to restrict animation effect
 
 Nov 10,2019
 	What I did yesterday:
