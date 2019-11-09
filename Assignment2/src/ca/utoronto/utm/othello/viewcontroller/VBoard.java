@@ -16,7 +16,7 @@ import javafx.util.Duration;
  */
 public class VBoard extends Label implements Observer {
 
-	private Othello othello;
+	private static Othello othello;
 	private GridPane grid;
 	public String p1Colour = "-fx-background-color: #000000; ";
 	public String p2Colour = "-fx-background-color: #FFFFFF; ";
@@ -26,7 +26,7 @@ public class VBoard extends Label implements Observer {
 	private Timeline t2;
 
 	public VBoard(Othello othello, GridPane grid, Timeline t1, Timeline t2) {
-		this.othello = othello;
+		VBoard.othello = othello;
 		this.grid = grid;
 		this.t1=t1;
 		this.t2=t2;
@@ -34,6 +34,7 @@ public class VBoard extends Label implements Observer {
 
 	@Override
 	public void update(Observable o) {
+		Othello ot = (Othello) o;
 		for (int row = 0; row < Othello.DIMENSION; row++) {
 			for (int col = 0; col < Othello.DIMENSION; col++) {
 				Button button = new Button();
@@ -41,15 +42,31 @@ public class VBoard extends Label implements Observer {
 					if (GridPane.getColumnIndex(node) == col) {
 						if (GridPane.getRowIndex(node) == row) {
 							button = (Button) node;
-							if (this.othello.getToken(row, col) == OthelloBoard.P1) {
+							if (ot.getToken(row, col) == OthelloBoard.P1) {
+								if (VBoard.othello.getToken(row, col)==OthelloBoard.P2) {
+										FadeTransition fadeOut = new FadeTransition(Duration.millis(2000),button);
+										fadeOut.setFromValue(1.0);
+										fadeOut.setToValue(0.1);
+										fadeOut.setCycleCount(2);
+										fadeOut.setAutoReverse(true);
+										fadeOut.play();
+										}
 								button.setStyle(p1Colour);
 							}
-							if (this.othello.getToken(row, col) == OthelloBoard.P2) {
+							if (ot.getToken(row, col) == OthelloBoard.P2) {
+								if (VBoard.othello.getToken(row, col)==OthelloBoard.P1) {
+									FadeTransition fadeOut = new FadeTransition(Duration.millis(2000),button);
+									fadeOut.setFromValue(3.0);
+									fadeOut.setToValue(0.1);
+									fadeOut.setCycleCount(2);
+									fadeOut.setAutoReverse(true);
+									fadeOut.play();
+									}
 								button.setStyle(p2Colour);
 							}
 							button.setText("");
 							button.setPrefSize(40, 40);
-							button.setOnAction(new ButtonPressEventHandler(row, col, this.othello, 
+							button.setOnAction(new ButtonPressEventHandler(row, col, VBoard.othello, 
 									t1, t2));
 							if (button.getStyle() == p3Colour) {
 								button.setStyle(p4Colour);
@@ -59,6 +76,7 @@ public class VBoard extends Label implements Observer {
 				}
 			}
 		}
+		VBoard.othello = ot.copy();
 	}
 
 }

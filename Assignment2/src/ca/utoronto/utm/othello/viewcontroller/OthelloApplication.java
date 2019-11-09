@@ -34,7 +34,7 @@ public class OthelloApplication extends Application {
 
 		// MODEL
 		Othello othello = new Othello();
-
+		Othello copy = othello.copy();
 		// CONTROLLER
 		HBox root = new HBox();
 		VBox left = new VBox();
@@ -60,7 +60,7 @@ public class OthelloApplication extends Application {
 	
 
 		// VIEW
-		VBoard vBoard = new VBoard(othello, grid, timer1, timer2);
+		VBoard vBoard = new VBoard(copy, grid, timer1, timer2);
 		VBoard2 vBoard2 = new VBoard2();
 		
 		

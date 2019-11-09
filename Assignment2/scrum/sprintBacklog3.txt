@@ -34,6 +34,7 @@ I click my move, then click COMPUTER_MOVE, then the computer moves,
 ...
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
+<<<<<<< HEAD
 TYPE     : USER STORY 1.101 : UTORID : mundboth STATUS : Complete
 NAME     : AI Hint
 OWNER    : Navnee Mundboth
@@ -53,4 +54,13 @@ ESTIMATE : 3 hour   ACTUAL :  1 day
 ISSUE    : When users play, they see a chess like timer for the othello game. 
 For this user story, the time is fixed to 5 minutes/player.
 After a player makes a move the timer switches off for the player and on for the next mover.
+=======
+TYPE     : USER STORY 1.13 : trinhmi4 : STATUS : Complete
+NAME     : Animation
+OWNER    : Minh
+PRIORITY : 1
+ESTIMATE : 3 hours    ACTUAL :  2 hours
+ISSUE    : When a user makes a move, they see an animation associated
+with their placing a piece. 
+>>>>>>> refs/remotes/origin/US1.013
 --------------------------------------------------------------------------
