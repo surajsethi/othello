@@ -29,7 +29,7 @@ public class OthelloApplication extends Application {
 
 		// MODEL
 		Othello othello = new Othello();
-
+		Othello copy = othello.copy();
 		// CONTROLLER
 		HBox root = new HBox();
 		VBox left = new VBox();
@@ -39,7 +39,7 @@ public class OthelloApplication extends Application {
 		FlowPane hintPane = new FlowPane();
 
 		// VIEW
-		VBoard vBoard = new VBoard(othello, grid);
+		VBoard vBoard = new VBoard(copy, grid);
 		VBoard2 vBoard2 = new VBoard2();
 		// VOpponentChooser vOpponentChooser = new VOpponentChooser(opponentPane, root);
 		// MODEL->VIEW hookup

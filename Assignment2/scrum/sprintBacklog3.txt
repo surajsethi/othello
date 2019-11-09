@@ -33,3 +33,12 @@ I click my move, then click COMPUTER_MOVE, then the computer moves,
 I click my move, then click COMPUTER_MOVE, then the computer moves, 
 ...
 --------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 1.13 : trinhmi4 : STATUS : Complete
+NAME     : Animation
+OWNER    : Minh
+PRIORITY : 1
+ESTIMATE : 3 hours    ACTUAL :  2 hours
+ISSUE    : When a user makes a move, they see an animation associated
+with their placing a piece. 
+--------------------------------------------------------------------------
