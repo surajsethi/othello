@@ -18,6 +18,8 @@ public class VBoard extends Label implements Observer {
 	private GridPane grid;
 	public String p1Colour = "-fx-background-color: #000000; ";
 	public String p2Colour = "-fx-background-color: #FFFFFF; ";
+	public String p3Colour = "-fx-background-color: #FFB266; ";
+	public String p4Colour = "-fx-background-color: grey";
 
 	public VBoard(Othello othello, GridPane grid) {
 		this.othello = othello;
@@ -41,6 +43,9 @@ public class VBoard extends Label implements Observer {
 							}
 							button.setPrefSize(40, 40);
 							button.setOnAction(new ButtonPressEventHandler(row, col, this.othello));
+							if (button.getStyle() == p3Colour) {
+								button.setStyle(p4Colour);
+							}
 						}
 					}
 				}
