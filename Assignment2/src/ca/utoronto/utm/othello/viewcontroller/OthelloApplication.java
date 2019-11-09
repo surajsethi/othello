@@ -49,7 +49,7 @@ public class OthelloApplication extends Application {
 		p1Time.setFont(new Font("Arial", 30));
 		p2Time.setFont(new Font("Arial", 30));
 		
-		Timeline timer1 = new Timeline(new KeyFrame(Duration.millis(1000), 
+		Timeline timer1 = new Timeline(new KeyFrame(Duration.millis(50), 
 				new TimerHandler("Player 1", p1Time, othello)));
 
 		Timeline timer2 = new Timeline(new KeyFrame(Duration.millis(1000), 
