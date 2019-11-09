@@ -23,7 +23,9 @@ public class Othello extends Observable{
 	private OthelloBoard board=new OthelloBoard(Othello.DIMENSION);
 	private char whosTurn = OthelloBoard.P1;
 	private int numMoves = 0;
-
+	private boolean timerWin = false;
+	private char timerWinner = OthelloBoard.EMPTY;
+	
 	/**
 	 * return P1,P2 or EMPTY depending on who moves next.
 	 * 
@@ -83,11 +85,12 @@ public class Othello extends Observable{
 	 */
 	public char getWinner() {
 		if(!this.isGameOver())return OthelloBoard.EMPTY;
+		if(timerWin)return timerWinner;
 		if(this.getCount(OthelloBoard.P1)> this.getCount(OthelloBoard.P2))return OthelloBoard.P1;
 		if(this.getCount(OthelloBoard.P1)< this.getCount(OthelloBoard.P2))return OthelloBoard.P2;
 		return OthelloBoard.EMPTY;
 	}
-
+	
 
 	/**
 	 * 
@@ -95,6 +98,12 @@ public class Othello extends Observable{
 	 */
 	public boolean isGameOver() {
 		return this.whosTurn==OthelloBoard.EMPTY;
+	}
+	
+	
+	public void timerWin() {
+		timerWinner = OthelloBoard.otherPlayer(this.getWhosTurn());
+		this.whosTurn = OthelloBoard.EMPTY;
 	}
 
 	/**
