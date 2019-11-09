@@ -39,7 +39,6 @@ public class VBoard extends Label implements Observer {
 							if (this.othello.getToken(row, col) == OthelloBoard.P2) {
 								button.setStyle(p2Colour);
 							}
-							button.setText("");
 							button.setPrefSize(40, 40);
 							button.setOnAction(new ButtonPressEventHandler(row, col, this.othello));
 						}

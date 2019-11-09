@@ -20,7 +20,7 @@ P1: Random P2: Human
 --------------------------------------------------------------------------
 TYPE     : USER STORY 1.078 : UTORID : mundboth STATUS : Complete
 NAME     : Opponent Chooser Partial Implementation
-OWNER    :
+OWNER    : Navnee Mundboth
 PRIORITY : 1
 ESTIMATE : 2 hours    ACTUAL : 2 hours
 ISSUE    : An extension to Opponent Chooser, we hardcode 
@@ -32,4 +32,15 @@ I click my move, then click COMPUTER_MOVE, then the computer moves,
 I click my move, then click COMPUTER_MOVE, then the computer moves, 
 I click my move, then click COMPUTER_MOVE, then the computer moves, 
 ...
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 1.101 : UTORID : mundboth STATUS : Complete
+NAME     : AI Hint
+OWNER    : Navnee Mundboth
+PRIORITY : 2
+ESTIMATE : 1 hour    ACTUAL :  1 hour
+ISSUE    : When the user is playing, the current mover can select a gui
+component (click a button etc) and a hint will display. For this user story, the 
+position of the hint is highlighted on the board.
+
 --------------------------------------------------------------------------

@@ -73,8 +73,10 @@ public class OthelloApplication extends Application {
 		
 //		Button ai = new Button("AI");
 //		ai.setOnAction(new HintPressEventHandler(left, grid, othello));
-		Button hint = new Button("Hint");
-		hint.setOnAction(new HintPressEventHandler(left, grid, othello));
+		Button ghint = new Button("Greedy Hint");
+		ghint.setOnAction(new HintPressEventHandler(left, grid, othello));
+		Button rhint = new Button("Random Hint");
+		rhint.setOnAction(new HintPressEventHandler(left, grid, othello));
 
 		Label opponent = new Label("Which opponent would you like to play against?");
 		
@@ -88,7 +90,7 @@ public class OthelloApplication extends Application {
 		opponentPane.setLayoutX(700);
 		opponentPane.setVisible(true);
 		
-		hintPane.getChildren().addAll(hint);
+		hintPane.getChildren().addAll(ghint, rhint);
 		hintPane.setPrefSize(10, 10);
 		hintPane.setHgap(10);
 		hintPane.setLayoutY(100);
