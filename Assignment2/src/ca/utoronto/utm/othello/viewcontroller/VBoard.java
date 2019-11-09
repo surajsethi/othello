@@ -5,6 +5,7 @@ import ca.utoronto.utm.othello.model.Othello;
 import ca.utoronto.utm.othello.model.OthelloBoard;
 import ca.utoronto.utm.util.Observable;
 import ca.utoronto.utm.util.Observer;
+import javafx.animation.Timeline;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -18,10 +19,14 @@ public class VBoard extends Label implements Observer {
 	private GridPane grid;
 	public String p1Colour = "-fx-background-color: #000000; ";
 	public String p2Colour = "-fx-background-color: #FFFFFF; ";
+	private Timeline t1;
+	private Timeline t2;
 
-	public VBoard(Othello othello, GridPane grid) {
+	public VBoard(Othello othello, GridPane grid, Timeline t1, Timeline t2) {
 		this.othello = othello;
 		this.grid = grid;
+		this.t1=t1;
+		this.t2=t2;
 	}
 
 	@Override
@@ -40,7 +45,8 @@ public class VBoard extends Label implements Observer {
 								button.setStyle(p2Colour);
 							}
 							button.setPrefSize(40, 40);
-							button.setOnAction(new ButtonPressEventHandler(row, col, this.othello));
+							button.setOnAction(
+									new ButtonPressEventHandler(row, col, this.othello, t1, t2 ));
 						}
 					}
 				}

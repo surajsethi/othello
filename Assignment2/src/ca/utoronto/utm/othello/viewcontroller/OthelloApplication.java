@@ -3,7 +3,10 @@ package ca.utoronto.utm.othello.viewcontroller;
 import java.awt.Panel;
 
 import ca.utoronto.utm.othello.model.*;
-
+import ca.utoronto.utm.othello.viewcontroller.TimerHandler;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -14,7 +17,9 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 public class OthelloApplication extends Application {
 	// REMEMBER: To run this in the lab put
@@ -36,10 +41,29 @@ public class OthelloApplication extends Application {
 		VBox right = new VBox();
 		GridPane grid = new GridPane();
 		FlowPane opponentPane = new FlowPane();
+		
+		Label p1Time = new Label("Player 1");
+		Label p2Time = new Label("Player 2");
+
+		p1Time.setFont(new Font("Arial", 30));
+		p2Time.setFont(new Font("Arial", 30));
+		
+		Timeline timer1 = new Timeline(new KeyFrame(Duration.millis(1000), 
+				new TimerHandler("Player 1", p1Time, othello)));
+
+		Timeline timer2 = new Timeline(new KeyFrame(Duration.millis(1000), 
+				new TimerHandler("Player 2", p2Time, othello)));
+		
+		timer1.setCycleCount(Animation.INDEFINITE);
+		timer1.play();
+		
 
 		// VIEW
-		VBoard vBoard = new VBoard(othello, grid);
+		VBoard vBoard = new VBoard(othello, grid, timer1, timer2);
 		VBoard2 vBoard2 = new VBoard2();
+		
+		
+		
 		// VOpponentChooser vOpponentChooser = new VOpponentChooser(opponentPane, root);
 		// MODEL->VIEW hookup
 		othello.attach(vBoard);
@@ -56,7 +80,7 @@ public class OthelloApplication extends Application {
 					button.setStyle("-fx-background-color: #FFFFFF; ");
 				}
 				button.setPrefSize(40, 40);
-				button.setOnAction(new ButtonPressEventHandler(row, col, othello));
+				button.setOnAction(new ButtonPressEventHandler(row, col, othello, timer1, timer2));
 				grid.addColumn(col, button);
 			}
 		}
@@ -81,7 +105,7 @@ public class OthelloApplication extends Application {
 		opponentPane.setVisible(true);
 		
 		left.getChildren().addAll(grid, vBoard2);
-		right.getChildren().addAll(opponent, opponentPane);
+		right.getChildren().addAll(opponent, opponentPane, p1Time, p2Time);
 		root.getChildren().addAll(left, right);
 		// SCENE
 		Scene scene = new Scene(root, 800, 600);
