@@ -1,11 +1,14 @@
 package ca.utoronto.utm.othello.viewcontroller;
 
 import ca.utoronto.utm.othello.model.Othello;
+<<<<<<< HEAD
 import ca.utoronto.utm.othello.model.OthelloBoard;
 import ca.utoronto.utm.othello.model.PlayerGreedy;
 import ca.utoronto.utm.othello.model.PlayerRandom;
 import ca.utoronto.utm.othello.model.Move;
 import javafx.scene.layout.GridPane;
+=======
+>>>>>>> refs/remotes/origin/UserStory1.078
 import javafx.scene.layout.VBox;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
