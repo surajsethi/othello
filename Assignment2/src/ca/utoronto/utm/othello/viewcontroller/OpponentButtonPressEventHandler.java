@@ -35,32 +35,33 @@ public class OpponentButtonPressEventHandler  implements EventHandler<ActionEven
 		this.b = ((Button) (event.getSource()));
 		
 		PlayerGreedy p2 = new PlayerGreedy(this.othello, OthelloBoard.P2);
-		PlayerRandom r2 = new PlayerRandom(this.othello, OthelloBoard.P1);
+		PlayerRandom r2 = new PlayerRandom(this.othello, OthelloBoard.P2);
 		
-		for (Node node : this.grid.getChildren()) {
-			Button button = new Button();
-			if (this.b.getText() == "Greedy") {
-				Move move = p2.getMove();
-				if (GridPane.getColumnIndex(node) == move.getCol()) {
-					if (GridPane.getRowIndex(node) == move.getRow()) {
-						button = (Button) node;
-						button.setStyle(p2Colour);
-						this.othello.move(move.getRow(), move.getCol());
+		if (this.othello.getWhosTurn() == OthelloBoard.P2) {
+			for (Node node : this.grid.getChildren()) {
+				Button button = new Button();
+				if (this.b.getText() == "Greedy") {
+					Move move = p2.getMove();
+					if (GridPane.getColumnIndex(node) == move.getCol()) {
+						if (GridPane.getRowIndex(node) == move.getRow()) {
+							button = (Button) node;
+							button.setStyle(p2Colour);
+							this.othello.move(move.getRow(), move.getCol());
+						}
 					}
 				}
-			}
-			else if (this.b.getText() == "Random") {
-				Move move = r2.getMove();
-				if (GridPane.getColumnIndex(node) == move.getCol()) {
-					if (GridPane.getRowIndex(node) == move.getRow()) {
-						button = (Button) node;
-						button.setStyle(p2Colour);
-						this.othello.move(move.getRow(), move.getCol());
+				else if (this.b.getText() == "Random") {
+					Move move = r2.getMove();
+					if (GridPane.getColumnIndex(node) == move.getCol()) {
+						if (GridPane.getRowIndex(node) == move.getRow()) {
+							button = (Button) node;
+							button.setStyle(p2Colour);
+							this.othello.move(move.getRow(), move.getCol());
+						}
 					}
 				}
 			}
 		}
-		
 		OpponentButtonPressEventHandler.label.setText("P1:  Human    P2: "+this.b.getText());		
 	}
 
