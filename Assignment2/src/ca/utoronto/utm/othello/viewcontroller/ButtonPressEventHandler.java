@@ -37,21 +37,13 @@ public class ButtonPressEventHandler implements EventHandler<ActionEvent> {
 		this.o.move(row, col);
 		t1.setCycleCount(Animation.INDEFINITE);
 		t2.setCycleCount(Animation.INDEFINITE);
-
-		
-		
 		if (this.o.getWhosTurn()== OthelloBoard.P1) {
-			
 			t1.play();
 			t2.stop();
 		}
-		
 		if (this.o.getWhosTurn()== OthelloBoard.P2) {
 			t2.play();
 			t1.stop();
 		}
-		
-		
-
 	}
 }

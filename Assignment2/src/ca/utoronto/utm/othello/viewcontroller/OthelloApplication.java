@@ -11,6 +11,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
@@ -42,6 +43,7 @@ public class OthelloApplication extends Application {
 		GridPane grid = new GridPane();
 		FlowPane opponentPane = new FlowPane();
 		FlowPane hintPane = new FlowPane();
+		FlowPane timerPane = new FlowPane();
 		
 		Label p1Time = new Label("Player 1");
 		Label p2Time = new Label("Player 2");
@@ -95,6 +97,12 @@ public class OthelloApplication extends Application {
 		Button random = new Button("Random");
 		random.setOnAction(new OpponentButtonPressEventHandler(left, grid, othello));
 		
+		TextField inputTime = new TextField();
+		inputTime.setText("Insert Minutes Here");
+		Button setTime = new Button("Set Timer");
+		setTime.setOnAction(new SetTimeButtonPressEventHandler(inputTime.getText()));
+		
+		
 //		Button ai = new Button("AI");
 //		ai.setOnAction(new HintPressEventHandler(left, grid, othello));
 		Button ghint = new Button("Greedy Hint");
@@ -110,7 +118,6 @@ public class OthelloApplication extends Application {
 		opponentPane.setPrefSize(10, 10);
 		opponentPane.setHgap(10);
 		opponentPane.setLayoutY(100);
-		//opponentPane.
 		opponentPane.setLayoutX(700);
 		opponentPane.setVisible(true);
 		
@@ -118,12 +125,18 @@ public class OthelloApplication extends Application {
 		hintPane.setPrefSize(10, 10);
 		hintPane.setHgap(10);
 		hintPane.setLayoutY(100);
-		//hintPane.
 		hintPane.setLayoutX(700);
 		hintPane.setVisible(true);
 		
+		timerPane.getChildren().addAll(p1Time, p2Time, inputTime, setTime);
+		opponentPane.setPrefSize(10, 10);
+		opponentPane.setHgap(10);
+		opponentPane.setLayoutY(100);
+		opponentPane.setLayoutX(700);
+		opponentPane.setVisible(true);
+		
 		left.getChildren().addAll(grid, vBoard2);
-		right.getChildren().addAll(opponent, opponentPane, p1Time, p2Time, stuck, hintPane);
+		right.getChildren().addAll(opponent, opponentPane, timerPane, stuck, hintPane);
 		root.getChildren().addAll(left, right);
 		// SCENE
 		Scene scene = new Scene(root, 800, 600);
